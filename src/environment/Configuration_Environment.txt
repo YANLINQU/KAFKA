@@ -1,0 +1,8 @@
+sudo gedit /etc/profile
+
+#Add kafka into
+export KAFKA_HOME=/usr/local/kafka
+export PATH=$KAFKA_HOME/bin:$PATH
+
+#Activite
+source /etc/profile

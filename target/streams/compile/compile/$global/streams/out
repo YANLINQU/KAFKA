@@ -1,0 +1,16 @@
+[0m[[0m[31merror[0m] [0m[0mE:\PARTICEEP\KAFKA\src\main\scala\demo_simple\consumer\KafkaConsumerDemo.scala:4:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.clients.consumer.{ ConsumerRecords, KafkaConsumer }[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\PARTICEEP\KAFKA\src\main\scala\demo_simple\consumer\KafkaConsumerDemo.scala:23:29: not found: type KafkaConsumer[0m
+[0m[[0m[31merror[0m] [0m[0m    val kafkaConsumer = new KafkaConsumer[String, String](get_prop)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\PARTICEEP\KAFKA\src\main\scala\demo_simple\consumer\KafkaConsumerDemo.scala:32:17: not found: type ConsumerRecords[0m
+[0m[[0m[31merror[0m] [0m[0m      val msgs: ConsumerRecords[String, String] = kafkaConsumer.poll(2000)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\PARTICEEP\KAFKA\src\main\scala\demo_simple\producer\KafkaProducerDemo.scala:29:24: not found: type KafkaProducer[0m
+[0m[[0m[31merror[0m] [0m[0m    val producer = new KafkaProducer[String, String](get_prop)[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\PARTICEEP\KAFKA\src\main\scala\demo_simple\producer\KafkaProducerDemo.scala:35:16: not found: type RecordMetadata[0m
+[0m[[0m[31merror[0m] [0m[0m      val rmd: RecordMetadata = producer.send(new ProducerRecord[String, String]("first_topic", msg)).get()[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

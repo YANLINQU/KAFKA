@@ -1,0 +1,14 @@
+[Unit]
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target
+
+[Service]
+Type=simple
+User=menthepourrie
+ExecStart=/usr/local/kafka/bin/zookeeper-server-start.sh /usr/local/kafka/config/zookeeper.properties
+ExecStop=/usr/local/kafka/bin/zookeeper-server-stop.sh
+Restart=on-abnormal
+Environment=JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+[Install]
+WantedBy=multi-user.target

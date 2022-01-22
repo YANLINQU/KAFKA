@@ -1,0 +1,17 @@
+sudo gedit /usr/local/kafka/config/server.properties
+
+# The unique identifier of each broker in the cluster, which cannot be repeated
+broker.id=0
+port=9092
+
+# The maximum size of a request that the socket server will accept (protection against OOM)
+socket.request.max.bytes=104857600
+
+# The default number of log partitions per topic. More partitions allow greater
+# parallelism for consumption, but this will also result in more files across
+# the brokers.
+num.partitions=1
+
+# Zookeeper connection string (see zookeeper docs for details).
+zookeeper.connect=192.168.0.27:2181,192.168.0.30:2181,192.168.0.31:2181
+

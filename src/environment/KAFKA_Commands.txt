@@ -1,0 +1,26 @@
+--start kafka in /usr/local/kafka
+sudo systemctl daemon-reload
+sudo systemctl start kafka
+sudo systemctl status kafka
+sudo systemctl stop kafka
+
+--create topic
+sudo bash ./bin/kafka-topics.sh --zookeeper menthepourrie:2181 --create --topic first_topic --replication-factor 2 --partitions 1
+
+--list all topic
+sudo bash ./bin/kafka-topics.sh --zookeeper menthepourrie:2181 --list
+
+--list all infos of topic
+sudo bash ./bin/kafka-topics.sh --zookeeper menthepourrie:2181 --describe --topic first_test
+
+--delete topic
+add delete.topic.enable=true in server.propertics
+sudo bash kafka-topics.sh --delete --topic first_test --zookeeper menthepourrie:2181
+
+--update topic
+sudo bash kafka-topics.sh --zookeeper menthepourrie:2181 --alter --partitions 3 --topic first_test
+sudo bash kafka-topics.sh --zookeeper menthepourrie:2181 --alter --replication-factor 2 --topic first_test
+
+-- list broker ids
+./bin/zookeeper-shell.sh menthepourrie:2181
+ls /brokers/ids
