@@ -1,4 +1,4 @@
-package test
+package demo_simple.consumer
 
 import java.util.{ Collections, Properties }
 import org.apache.kafka.clients.consumer.{ ConsumerRecords, KafkaConsumer }

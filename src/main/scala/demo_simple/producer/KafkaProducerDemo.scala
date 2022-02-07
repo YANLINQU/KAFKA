@@ -1,4 +1,4 @@
-package test
+package demo_simple.producer
 
 import java.util.Properties
 
